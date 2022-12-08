@@ -1,0 +1,46 @@
+.todo-list {
+  display: grid;
+  gap: 1rem;
+  list-style-type: none;
+  padding: 0;
+  margin-top: 5rem;
+}
+
+.todo-list li {
+  box-shadow: 0 0 10px #3333332c;
+  user-select: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: all 0.3s ease;
+}
+
+.todo-list li:hover {
+  box-shadow: 0 0 15px #3333332c;
+}
+
+.todo-list li > * {
+  padding: 1rem;
+  cursor: pointer;
+}
+
+.todo-list label {
+  flex-grow: 1;
+}
+
+.todo-list li button {
+  background-color: transparent;
+  border: none;
+}
+
+.todo-list label.done {
+  text-decoration: line-through;
+}
+
+.todo-list .remove {
+  color: #ff0000;
+}
+
+.todo-list .remove:not(.done) {
+  display: none;
+}
