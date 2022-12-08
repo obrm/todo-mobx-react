@@ -1,7 +1,7 @@
 import { observer } from 'mobx-react-lite';
 
 import { useStore } from '../stores';
-import { Todo } from "../stores/TodoStore";
+import { Todo } from "../stores/TodoStore.class";
 
 import styles from './styles/TodoList.module.css';
 
