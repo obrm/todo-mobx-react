@@ -8,8 +8,18 @@ const App = () => {
   // Use of useLocalObservable instead of useState (for complex local state)
   const appUI = useLocalObservable(() => ({
     todosVisible: true,
-    toggleTodoVisibility() {
+    loading: false,
+    receiveData() {
+      appUI.loading = false;
       appUI.todosVisible = !appUI.todosVisible;
+    },
+    // https://mobx.js.org/actions.html#asynchronous-actions
+    async toggleTodoVisibility() {
+      appUI.loading = true;
+
+      await new Promise(resolve => setTimeout(() => resolve(void 0), 1000));
+
+      appUI.receiveData();
     },
   }));
 
