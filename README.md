@@ -1,4 +1,4 @@
-# React with MobX Todo app
+# Todo React with TypeScript & MobX app 
 
 [To the live demo of the project](https://obrm-todo-mobx.netlify.app).
 
