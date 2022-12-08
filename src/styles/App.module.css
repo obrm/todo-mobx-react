@@ -1,3 +1,7 @@
 .todo-list-wrapper {
   margin-top: 5rem;
 }
+
+.todo-list-wrapper h2 {
+  cursor: pointer;
+}
